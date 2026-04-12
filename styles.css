@@ -20,7 +20,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
   color: var(--text);
   background:
     radial-gradient(circle at top left, rgba(157, 108, 59, 0.1), transparent 28%),
@@ -29,6 +29,10 @@ body {
 
 body {
   line-height: 1.55;
+}
+
+main {
+  display: grid;
 }
 
 a {
@@ -52,6 +56,8 @@ a {
 
 .site-header {
   margin-bottom: 28px;
+  padding: 8px 0 18px;
+  border-bottom: 1px solid rgba(62, 48, 35, 0.08);
 }
 
 .brand {
@@ -59,6 +65,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .site-nav,
@@ -69,11 +76,22 @@ a {
   font-size: 0.95rem;
 }
 
+.site-nav a,
+.footer-links a {
+  transition: color 160ms ease;
+}
+
+.site-nav a:hover,
+.footer-links a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--text);
+}
+
 .card {
   background: var(--card);
   border: 1px solid var(--card-border);
   border-radius: 28px;
-  box-shadow: 0 24px 60px var(--shadow);
+  box-shadow: 0 18px 44px var(--shadow);
 }
 
 .hero {
@@ -99,6 +117,8 @@ h1,
 h2 {
   margin: 0 0 14px;
   line-height: 1.08;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 700;
 }
 
 h1 {
@@ -119,6 +139,7 @@ p {
 .lede {
   max-width: 58ch;
   font-size: 1.06rem;
+  color: #544941;
 }
 
 .hero-links {
@@ -136,11 +157,16 @@ p {
   padding: 0 18px;
   border-radius: 999px;
   font-weight: 600;
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
 }
 
 .button-primary {
   background: var(--accent);
   color: #fffaf3;
+  box-shadow: 0 14px 28px rgba(157, 108, 59, 0.18);
 }
 
 .button-secondary {
@@ -148,10 +174,18 @@ p {
   border: 1px solid var(--line);
 }
 
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-secondary:hover {
+  border-color: rgba(62, 48, 35, 0.22);
+}
+
 .hero-panel {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .mock-window {
@@ -184,6 +218,10 @@ p {
 .mock-window-body p:first-child {
   color: var(--text);
   font-weight: 600;
+}
+
+.section-heading {
+  max-width: 24rem;
 }
 
 .info-section {
@@ -249,6 +287,7 @@ p {
 
 .legal-card {
   padding: 32px;
+  background: rgba(255, 253, 249, 0.96);
 }
 
 .legal-card h2 {
@@ -283,13 +322,7 @@ p {
     align-items: flex-start;
   }
 
-  .hero,
   .legal-card {
     padding: 22px;
-  }
-
-  .hero {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
