@@ -326,3 +326,15 @@ p {
     padding: 22px;
   }
 }
+/* --- GhoScript download additions (append to styles.css) --- */
+.download-card{background:#201a16;color:#fffaf3;border-radius:28px;padding:32px;box-shadow:0 18px 44px var(--shadow)}
+.download-card p{color:rgba(255,250,243,.78)}
+.download-card .button-primary{background:#fffaf3;color:#201a16;box-shadow:none}
+.download-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;font-size:.92rem}
+.download-meta span{border:1px solid rgba(255,250,243,.25);border-radius:999px;padding:7px 12px}
+.shortcut-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.shortcut-item{background:var(--accent-soft);border:1px solid rgba(157,108,59,.16);border-radius:16px;padding:14px 16px;color:var(--muted)}
+.shortcut-item strong{color:var(--text);display:block;margin-bottom:4px}
+.compat-table{width:100%;border-collapse:collapse;color:var(--muted)}
+.compat-table th,.compat-table td{padding:10px 12px;border-bottom:1px solid var(--line);text-align:left}
+.compat-table th{color:var(--text)}
