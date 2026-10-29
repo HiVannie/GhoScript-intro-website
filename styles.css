@@ -74,3 +74,5 @@ p { margin: 0 0 14px; color: var(--muted); }
 .compat-table th { color: var(--text); }
 @media (max-width: 860px) { .hero, .info-section { grid-template-columns: 1fr; } .hero { padding: 28px 0 36px; } h1 { max-width: none; } }
 @media (max-width: 560px) { .page-shell { width: min(100% - 20px, 1120px); padding-top: 16px; } .site-header, .site-footer { flex-direction: column; align-items: flex-start; } .legal-card { padding: 22px; } }
+
+.app-icon { width: 84px; height: 84px; border-radius: 20px; display: block; margin-bottom: 18px; box-shadow: 0 12px 32px rgba(0,0,0,0.5), 0 0 24px rgba(0,242,217,0.12); }
